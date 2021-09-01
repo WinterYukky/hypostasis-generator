@@ -1,4 +1,4 @@
-# any-hypostasis
+# hypostasis-generator
 
 ## Build Setup
 
