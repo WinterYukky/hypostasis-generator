@@ -1,9 +1,9 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col cols="12" sm="10" lg="8" xl="6">
+    <v-col cols="12" sm="10" md="8" xl="6">
       <hypostasis ref="hypostasis" :color="initColor"></hypostasis>
     </v-col>
-    <v-col cols="12" sm="8" md="6">
+    <v-col cols="12" md="4">
       <v-color-picker v-model="initColor"></v-color-picker>
       <v-btn @click="share()">シェア</v-btn>
     </v-col>
@@ -53,6 +53,7 @@ export default defineComponent({
       if (!blob) return
       navigator.share({
         text: '無相の〇〇を作ったよ！ #無相ジェネレーター',
+        url: 'https://hypostasis-generator.vercel.app',
         files: [new File([blob], 'hypostasis.png', { type: blob.type })],
       })
     }
